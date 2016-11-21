@@ -1,0 +1,136 @@
+/* ===== base ===== */
+* {
+    transition: .4s;
+}
+
+body {
+    color: #ececec;
+    background-color: #333;
+}
+
+.absolute {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.content {
+    width: 75%;
+    max-width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
+    background-color: #111;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px  0 100px 0;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+button {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    margin: 10px 0;
+    background-color: transparent;
+    color: #ececec;
+    text-transform: uppercase;
+    border: 1px solid #ececec;
+    transition: .4s;
+}
+
+button .fa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 59px;
+    line-height: 60px;
+    font-size: 2em;
+    background-color: #ececec;
+    color: #222;
+}
+
+button:hover {
+    background-color: #ececec;
+    color: #222;
+}
+
+.btn-close {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    transition: .5s;
+}
+
+.btn-close:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+/* ===== bloc article ===== */
+.article {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+}
+
+/* ===== image ===== */
+.art-img {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
+    overflow: hidden;
+    background-color: #111;
+}
+
+.art-img img {
+    width: 100%;
+    box-shadow: 0 0 100px #000;
+}
+
+/* ===== content article ===== */
+.art-content {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+}
+
+/* ===== Style des articles en mode grille ===== */
+.display-none .article {
+    width: 20vw;
+    min-width: 20vw;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.display-none .art-img {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.display-none .art-img img {
+    transition: .4s;
+    
+}
+
+.display-none .art-img img:hover {
+    filter: brightness(125%);
+}
+
+.display-none .article i, .display-none .article .art-content {
+    display: none;
+}
