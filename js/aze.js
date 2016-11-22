@@ -2,6 +2,7 @@ $(document).ready(function(){
     var X = [];
     var XmaxValue = $("div[id*='AZE_']").length;
     var displayTitle = true;
+    $('.anim').fadeOut( 0 );
     
     // modif var X
     $("div[id*='AZE_']").hover(function(){
@@ -73,6 +74,11 @@ $(document).ready(function(){
         displayTitle = false;
         $('#AZE_'+X).removeClass("display-none");
         $('#AZE_'+X).addClass("absolute"); 
+        /*$('.art-content .anim').animate({
+            left: '0',
+            opacity: '1'
+        });*/
+        $('.anim').fadeIn( 800 );
         $('.btn-nav-art').css('display','block');
     };
     // close
@@ -80,6 +86,11 @@ $(document).ready(function(){
         displayTitle = true;
         $('#AZE_'+X).addClass("display-none");
         $('#AZE_'+X).removeClass("absolute");
+        /*$('.art-content .anim').animate({
+            left: '-150%',
+            opacity: '0'
+        });*/
+        $('.anim').fadeOut( 800 );
         $('.art-img').css('opacity','1');
         $('.article').css({
             "display": "flex",

@@ -48,6 +48,12 @@
     align-items: center;
 }
 
+.anim {
+    position: relative;
+    /*left: -150%;
+    opacity: 0;*/
+}
+
 /* ===== close button ===== */
 .btn-close {
     position: absolute;
