@@ -72,7 +72,8 @@ $(document).ready(function(){
     function open(){
         displayTitle = false;
         $('#AZE_'+X).removeClass("display-none");
-        $('#AZE_'+X).addClass("absolute");    
+        $('#AZE_'+X).addClass("absolute"); 
+        $('.btn-nav-art').css('display','block');
     };
     // close
     function close(){
@@ -84,6 +85,7 @@ $(document).ready(function(){
             "display": "flex",
             "width":"auto"
         });
+        $('.btn-nav-art').css('display','none');
     };
     
     // next
