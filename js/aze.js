@@ -1,12 +1,21 @@
 $(document).ready(function(){
-    
     var X = [];
     $("div[id*='AZE_']").hover(function(){
-        X = [];
-        P = this.id;
-        P = P.split('_');
+        X = []; 
+        P = this.id.split('_');
         X.push(P[1]);
+        $('#AZE_'+X+' .article .art-img .title-img').css({
+            "width": "auto",
+            "font-size": "1em"
+        });
         restart();
+    });
+    
+    $("div[id*='AZE_']").mouseleave(function(){
+        $('#AZE_'+X+' .article .art-img .title-img').css({
+            "width": "0",
+            "font-size": "0"
+        });
     });
     
     function restart(){
@@ -21,5 +30,4 @@ $(document).ready(function(){
             $('#AZE_'+X).removeClass("absolute");
         });
     }
-    
 });

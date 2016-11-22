@@ -22,6 +22,17 @@
     box-shadow: 0 0 100px #000;
 }
 
+.title-img {
+    width: 0;
+    font-size: 0;
+    transition: .5s;
+    -webkit-transform: rotate(-90deg);
+       -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+         -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);    
+}
+
 /* ===== content article ===== */
 .art-content {
     padding: 50px;
