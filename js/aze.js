@@ -6,7 +6,7 @@ $(document).ready(function(){
         X.push(P[1]);
         $('#AZE_'+X+' .article .art-img .title-img').css({
             "width": "auto",
-            "font-size": "1em"
+            "opacity": "1"
         });
         restart();
     });
@@ -14,7 +14,7 @@ $(document).ready(function(){
     $("div[id*='AZE_']").mouseleave(function(){
         $('#AZE_'+X+' .article .art-img .title-img').css({
             "width": "0",
-            "font-size": "0"
+            "opacity": "0"
         });
     });
     
