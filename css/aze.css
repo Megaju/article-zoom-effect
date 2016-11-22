@@ -29,6 +29,19 @@
     align-items: center;
 }
 
+/* ===== close button ===== */
+.btn-close {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    transition: .5s;
+}
+
+.btn-close:hover {
+    color: orange;
+    cursor: pointer;
+}
+
 /* ===== articles when aren't zoom ===== */
 .display-none .article {
     width: 20vw;
