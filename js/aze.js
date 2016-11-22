@@ -28,8 +28,21 @@ $(document).ready(function(){
     
     // title reset (DOSEN'T WORK)
     $('.art-img').click(function(){
-        $(".art-img").css('opacity','0');
-        $('#AZE_'+X+' .article .art-img').css('opacity','1');
+        $(".art-img").css({
+            "opacity": "0",
+            "width": "0"
+        });
+        $(".article").css({
+            "opacity": "0",
+            "width": "0"
+        });
+        $('#AZE_'+X+' .article .art-img').css({
+            "opacity": "1"
+        });
+        $('#AZE_'+X+' .article').css({
+            "opacity": "1",
+            "width": "auto"
+        });
     });
     
     function restart(){
@@ -45,6 +58,10 @@ $(document).ready(function(){
             $('#AZE_'+X).addClass("display-none");
             $('#AZE_'+X).removeClass("absolute");
             $(".art-img").css('opacity','1');
+            $('.article').css({
+                "opacity": "1",
+                "width": "auto"
+            });
         });
     }
 });
