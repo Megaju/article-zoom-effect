@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var X = [];
+    var XmaxValue = $("div[id*='AZE_']").length;
     var displayTitle = true;
-    var detectH2Hover = true;
     
     // modif var X
     $("div[id*='AZE_']").hover(function(){
@@ -11,10 +11,10 @@ $(document).ready(function(){
         if (displayTitle === true) {
             titleAppear();
         }
-        console.log(X);
         restart();
     });
     
+    // open with click on the title
     $('.title-img').click(function(){
         open();
     });
@@ -37,6 +37,9 @@ $(document).ready(function(){
     
     // title and other article reset
     $('.art-img').click(function(){
+        reset();
+    });
+    function reset(){
         $(".art-img").css({
             "opacity": "0",
             "width": "0"
@@ -53,7 +56,7 @@ $(document).ready(function(){
             "width":"auto"
         });
         titleDisappear();
-    });
+    };
     
     function restart(){
         // open article X
@@ -62,14 +65,7 @@ $(document).ready(function(){
         });
         // close article X
         $('#AZE_'+X+' .article .btn-close').click(function(){
-            displayTitle = true;
-            $('#AZE_'+X).addClass("display-none");
-            $('#AZE_'+X).removeClass("absolute");
-            $(".art-img").css('opacity','1');
-            $('.article').css({
-                "display": "flex",
-                "width":"auto"
-            });
+            close();
         });
     };
     // open
@@ -78,5 +74,35 @@ $(document).ready(function(){
         $('#AZE_'+X).removeClass("display-none");
         $('#AZE_'+X).addClass("absolute");    
     };
+    // close
+    function close(){
+        displayTitle = true;
+        $('#AZE_'+X).addClass("display-none");
+        $('#AZE_'+X).removeClass("absolute");
+        $('.art-img').css('opacity','1');
+        $('.article').css({
+            "display": "flex",
+            "width":"auto"
+        });
+    };
+    
+    // next
+    $('#next').click(function(){
+        if (X < XmaxValue) {
+            close();
+            X++;
+            reset();
+            open();
+        }
+    });
+    // prev
+    $('#prev').click(function(){
+        if (X > 1) {
+            close();
+            X--;
+            reset();
+            open();
+        }
+    });
     
 });
