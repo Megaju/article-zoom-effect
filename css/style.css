@@ -1,8 +1,3 @@
-/* ===== base ===== */
-* {
-    transition: .4s;
-}
-
 body {
     color: #ececec;
     background-color: #333;
@@ -74,63 +69,4 @@ button:hover {
 .btn-close:hover {
     color: orange;
     cursor: pointer;
-}
-
-/* ===== bloc article ===== */
-.article {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    background-color: #333;
-}
-
-/* ===== image ===== */
-.art-img {
-    display: flex;
-    align-items: center;
-    width: 50%;
-    min-width: 50%;
-    max-width: 50%;
-    overflow: hidden;
-    background-color: #111;
-}
-
-.art-img img {
-    width: 100%;
-    box-shadow: 0 0 100px #000;
-}
-
-/* ===== content article ===== */
-.art-content {
-    padding: 50px;
-    display: flex;
-    align-items: center;
-}
-
-/* ===== Style des articles en mode grille ===== */
-.display-none .article {
-    width: 20vw;
-    min-width: 20vw;
-    height: auto;
-    margin-bottom: 50px;
-}
-
-.display-none .art-img {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    cursor: pointer;
-}
-
-.display-none .art-img img {
-    transition: .4s;
-    
-}
-
-.display-none .art-img img:hover {
-    filter: brightness(125%);
-}
-
-.display-none .article i, .display-none .article .art-content {
-    display: none;
 }
