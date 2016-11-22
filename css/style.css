@@ -39,8 +39,10 @@ body {
 }
 
 h1 {
+    font-weight: 500;
     margin: 0;
     font-size: 3em;
+    color: #ececec;
     text-transform: capitalize;
 }
 

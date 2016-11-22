@@ -1,7 +1,9 @@
 $(document).ready(function(){
     var X = [];
     var displayTitle = true;
+    var detectH2Hover = true;
     
+    // modif var X
     $("div[id*='AZE_']").hover(function(){
         X = []; 
         P = this.id.split('_');
@@ -9,7 +11,12 @@ $(document).ready(function(){
         if (displayTitle === true) {
             titleAppear();
         }
+        console.log(X);
         restart();
+    });
+    
+    $('.title-img').click(function(){
+        open();
     });
     
     // title appear on image mouse hover
@@ -21,15 +28,14 @@ $(document).ready(function(){
     };
     
     // title disepear on image mouse leave
-    function titleDisappear() {
+    function titleDisappear(){
         $('#AZE_'+X+' .article .art-img .title-img').css('opacity', '0');
     };
     $("div[id*='AZE_']").mouseleave(function(){
         titleDisappear();
     });
     
-    
-    // title reset (DOSEN'T WORK)
+    // title and other article reset
     $('.art-img').click(function(){
         $(".art-img").css({
             "opacity": "0",
@@ -52,9 +58,7 @@ $(document).ready(function(){
     function restart(){
         // open article X
         $('#AZE_'+X+' img').click(function(){
-            displayTitle = false;
-            $('#AZE_'+X).removeClass("display-none");
-            $('#AZE_'+X).addClass("absolute");
+            open();
         });
         // close article X
         $('#AZE_'+X+' .article .btn-close').click(function(){
@@ -67,6 +71,12 @@ $(document).ready(function(){
                 "width":"auto"
             });
         });
-    }
+    };
+    // open
+    function open(){
+        displayTitle = false;
+        $('#AZE_'+X).removeClass("display-none");
+        $('#AZE_'+X).addClass("absolute");    
+    };
     
 });
