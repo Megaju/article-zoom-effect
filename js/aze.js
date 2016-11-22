@@ -91,6 +91,17 @@ $(document).ready(function(){
         $('.btn-nav-art').css('display','none');
     };
     
+    
+    // inview
+    $(".article .art-content .anim p").on('inview', function(event, isInView) {
+        if (isInView) {
+            // element is now visible in the viewport
+            
+        } else {
+            // element has gone out of viewport
+        }
+    });
+    
     // next
     $('#next').click(function(){
         if (X < XmaxValue) {

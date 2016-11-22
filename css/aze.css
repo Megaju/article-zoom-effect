@@ -73,6 +73,7 @@
     min-width: 20vw;
     height: auto;
     margin-bottom: 50px;
+    transition: .4s;
 }
 
 .display-none .art-img {
