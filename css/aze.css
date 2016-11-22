@@ -26,8 +26,8 @@
 
 .title-img {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
     width: 0;
     margin: 0;
     padding: 10px 20px;
@@ -36,6 +36,8 @@
     transition: .5s;
     background-color: #222;
     background-color: rgba(0, 0, 0, .75);
+    border: 1px solid rgba(175, 175, 175, .2);
+    box-sizing: border-box;
     z-index: 2;
 }
 

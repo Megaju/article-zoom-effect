@@ -1,5 +1,7 @@
 $(document).ready(function(){
     var X = [];
+    var displayTitle = true;
+    
     $("div[id*='AZE_']").hover(function(){
         X = []; 
         P = this.id.split('_');
@@ -8,19 +10,19 @@ $(document).ready(function(){
         restart();
     });
     
-    $("div[id*='AZE_']").mouseleave(function(){
-        $('#AZE_'+X+' .article .art-img .title-img').css({
-            "width": "0",
-            "opacity": "0"
-        });
-    });
-    
+    // title appear on image mouse hover
     function titleHover(){
         $('#AZE_'+X+' .article .art-img .title-img').css({
             "width": "auto",
             "opacity": "1"
-        });    
+        }); 
     };
+    
+    // title disepear on image mouse leave
+    $("div[id*='AZE_']").mouseleave(function(){
+        $('#AZE_'+X+' .article .art-img .title-img').css('opacity', '0');
+    });
+    
     
     // title reset (DOSEN'T WORK)
     $('.art-img').click(function(){
@@ -29,12 +31,12 @@ $(document).ready(function(){
     });
     
     function restart(){
-        // ouverture de l'article X en cliquant sur son image
+        // open article X
         $('#AZE_'+X+' img').click(function(){
             $('#AZE_'+X).removeClass("display-none");
             $('#AZE_'+X).addClass("absolute");
         });
-        // fermeture de l'article X en cliquant sur la croix
+        // close article X
         $('#AZE_'+X+' .article .btn-close').click(function(){
             $('#AZE_'+X).addClass("display-none");
             $('#AZE_'+X).removeClass("absolute");
