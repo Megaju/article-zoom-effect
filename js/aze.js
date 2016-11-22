@@ -36,15 +36,17 @@ $(document).ready(function(){
             "width": "0"
         });
         $(".article").css({
-            "display":"none"
+            "display":"none",
+            "width":"0"
         });
-        titleDisappear();
         $('#AZE_'+X+' .article .art-img').css({
             "opacity": "1"
         });
         $('#AZE_'+X+' .article').css({
-            "display":"flex"
+            "display":"flex",
+            "width":"auto"
         });
+        titleDisappear();
     });
     
     function restart(){
@@ -61,7 +63,8 @@ $(document).ready(function(){
             $('#AZE_'+X).removeClass("absolute");
             $(".art-img").css('opacity','1');
             $('.article').css({
-                "display": "flex"
+                "display": "flex",
+                "width":"auto"
             });
         });
     }
