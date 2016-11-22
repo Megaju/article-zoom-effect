@@ -7,13 +7,13 @@ $(document).ready(function(){
         P = this.id.split('_');
         X.push(P[1]);
         if (displayTitle === true) {
-            titleHover();
+            titleAppear();
         }
         restart();
     });
     
     // title appear on image mouse hover
-    function titleHover(){
+    function titleAppear(){
         $('#AZE_'+X+' .article .art-img .title-img').css({
             "width": "auto",
             "opacity": "1"
@@ -21,8 +21,11 @@ $(document).ready(function(){
     };
     
     // title disepear on image mouse leave
-    $("div[id*='AZE_']").mouseleave(function(){
+    function titleDisappear() {
         $('#AZE_'+X+' .article .art-img .title-img').css('opacity', '0');
+    };
+    $("div[id*='AZE_']").mouseleave(function(){
+        titleDisappear();
     });
     
     
@@ -33,15 +36,14 @@ $(document).ready(function(){
             "width": "0"
         });
         $(".article").css({
-            "opacity": "0",
-            "width": "0"
+            "display":"none"
         });
+        titleDisappear();
         $('#AZE_'+X+' .article .art-img').css({
             "opacity": "1"
         });
         $('#AZE_'+X+' .article').css({
-            "opacity": "1",
-            "width": "auto"
+            "display":"flex"
         });
     });
     
@@ -59,8 +61,7 @@ $(document).ready(function(){
             $('#AZE_'+X).removeClass("absolute");
             $(".art-img").css('opacity','1');
             $('.article').css({
-                "opacity": "1",
-                "width": "auto"
+                "display": "flex"
             });
         });
     }
