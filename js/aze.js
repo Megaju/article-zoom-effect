@@ -4,10 +4,7 @@ $(document).ready(function(){
         X = []; 
         P = this.id.split('_');
         X.push(P[1]);
-        $('#AZE_'+X+' .article .art-img .title-img').css({
-            "width": "auto",
-            "opacity": "1"
-        });
+        titleHover();
         restart();
     });
     
@@ -16,6 +13,19 @@ $(document).ready(function(){
             "width": "0",
             "opacity": "0"
         });
+    });
+    
+    function titleHover(){
+        $('#AZE_'+X+' .article .art-img .title-img').css({
+            "width": "auto",
+            "opacity": "1"
+        });    
+    };
+    
+    // title reset (DOSEN'T WORK)
+    $('.art-img').click(function(){
+        $(".art-img").css('opacity','0');
+        $('#AZE_'+X+' .article .art-img').css('opacity','1');
     });
     
     function restart(){
@@ -28,6 +38,7 @@ $(document).ready(function(){
         $('#AZE_'+X+' .article .btn-close').click(function(){
             $('#AZE_'+X).addClass("display-none");
             $('#AZE_'+X).removeClass("absolute");
+            $(".art-img").css('opacity','1');
         });
     }
 });
