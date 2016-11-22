@@ -6,7 +6,9 @@ $(document).ready(function(){
         X = []; 
         P = this.id.split('_');
         X.push(P[1]);
-        titleHover();
+        if (displayTitle === true) {
+            titleHover();
+        }
         restart();
     });
     
@@ -33,11 +35,13 @@ $(document).ready(function(){
     function restart(){
         // open article X
         $('#AZE_'+X+' img').click(function(){
+            displayTitle = false;
             $('#AZE_'+X).removeClass("display-none");
             $('#AZE_'+X).addClass("absolute");
         });
         // close article X
         $('#AZE_'+X+' .article .btn-close').click(function(){
+            displayTitle = true;
             $('#AZE_'+X).addClass("display-none");
             $('#AZE_'+X).removeClass("absolute");
             $(".art-img").css('opacity','1');
