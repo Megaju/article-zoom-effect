@@ -59,6 +59,7 @@ $(document).ready(function(){
         titleDisappear();
     };
     
+    // restart
     function restart(){
         // open article X
         $('#AZE_'+X+' img').click(function(){
@@ -69,6 +70,7 @@ $(document).ready(function(){
             close();
         });
     };
+    
     // open
     function open(){
         displayTitle = false;
@@ -82,6 +84,7 @@ $(document).ready(function(){
         $('.anim').fadeIn( 400 );
         $('.btn-nav-art').css('display','block');
     };
+    
     // close
     function close(){
         displayTitle = true;
@@ -99,7 +102,6 @@ $(document).ready(function(){
         });
         $('.btn-nav-art').css('display','none');
     };
-    
     
     // inview
     $(".article .art-content .anim p").on('inview', function(event, isInView) {
