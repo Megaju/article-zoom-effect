@@ -74,7 +74,12 @@ $(document).ready(function(){
         displayTitle = false;
         $('#AZE_'+X).removeClass("display-none");
         $('#AZE_'+X).addClass("absolute"); 
-        $('.anim').fadeIn( 800 );
+        $('#AZE_'+X+' img').css({
+            "position":"relative",
+            "left":"-100%",
+            "transition":".4s"
+        });
+        $('.anim').fadeIn( 400 );
         $('.btn-nav-art').css('display','block');
     };
     // close
@@ -82,7 +87,11 @@ $(document).ready(function(){
         displayTitle = true;
         $('#AZE_'+X).addClass("display-none");
         $('#AZE_'+X).removeClass("absolute");
-        $('.anim').fadeOut( 800 );
+        $('#AZE_'+X+' img').css({
+            "position":"relative",
+            "left":"0"
+        });
+        $('.anim').fadeOut( 400 );
         $('.art-img').css('opacity','1');
         $('.article').css({
             "display": "flex",
@@ -96,7 +105,10 @@ $(document).ready(function(){
     $(".article .art-content .anim p").on('inview', function(event, isInView) {
         if (isInView) {
             // element is now visible in the viewport
-            
+            $('#AZE_'+X+' img').css({
+            "position":"relative",
+            "left":"0"
+        });
         } else {
             // element has gone out of viewport
         }
