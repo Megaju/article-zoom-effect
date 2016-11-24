@@ -13,4 +13,4 @@ If you have any ideas or tips do not hesitate !
 
 > 24/11/2016
 
-> EXAMPLE: [click me!](megaju.github.io/article-zoom-effect/#AZE_3)
+> EXAMPLE: [click me!](https://megaju.github.io/article-zoom-effect/#AZE_3)
