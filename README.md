@@ -6,3 +6,11 @@ Iop! Article Zoom Effect (AZE) is a simple slide article for your website. The p
 You can view the result on this [page](https://megaju.github.io/article-zoom-effect/).
 
 If you have any ideas or tips do not hesitate !
+
+# NEWS
+
+## Permalink
+
+> 24/11/2016
+
+> EXAMPLE: [click me!](megaju.github.io/article-zoom-effect/#AZE_3)
