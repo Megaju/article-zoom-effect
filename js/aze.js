@@ -4,6 +4,18 @@ $(document).ready(function(){
     var displayTitle = true;
     $('.anim').fadeOut( 0 );
     
+    // define var idPL to display the modal
+    var PL = window.location.hash;
+    var idPL = [];
+    PL = PL.split('_');
+    idPL.push(PL[1]);
+    console.log(idPL);
+    if (idPL > 0) {
+        X = idPL;
+        reset();
+        open();
+    }
+    
     // modif var X
     $("div[id*='AZE_']").hover(function(){
         X = []; 
